@@ -1,4 +1,4 @@
-SRCS			= PhoneBook.cpp Contact.cpp main.cpp
+SRCS			= Account.cpp tests.cpp
 
 OBJS			= $(SRCS:.cpp=.o)
 
@@ -8,7 +8,7 @@ FLAGS			= -Wall -Wextra -Werror -std=c++98
 
 RM				= rm -f
 
-NAME			= PhoneSimulator
+NAME			= Banking
 
 
 all:			$(NAME)
