@@ -6,7 +6,7 @@
 /*   By: dbelpaum <dbelpaum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:35:10 by dbelpaum          #+#    #+#             */
-/*   Updated: 2022/10/18 15:12:08 by dbelpaum         ###   ########.fr       */
+/*   Updated: 2022/10/20 12:08:03 by dbelpaum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,12 @@ void	PhoneBook::search(void)
 {
 	std::string str;
 
+	if (this->_idx == 0)
+	{
+		std::cout << "PhoneBook is empty" << std::endl;
+		return ;
+	}
+	
 	for (int i = 0; i < this->_idx && i < 8; i++)
 	{
 		std::cout << std::setw(10) << i;
@@ -118,6 +124,8 @@ void	PhoneBook::search(void)
 		std::cout << "Enter the index of the contact you want to display: ";
 		if (std::getline(std::cin, str) && str != "")
 			;
+		if (std::cin.eof())
+			return ;
 	}
 	this->_printContact(std::stoi(str));
 }
