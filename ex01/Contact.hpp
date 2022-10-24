@@ -6,7 +6,7 @@
 /*   By: dbelpaum <dbelpaum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 12:28:32 by dbelpaum          #+#    #+#             */
-/*   Updated: 2022/10/18 13:12:11 by dbelpaum         ###   ########.fr       */
+/*   Updated: 2022/10/24 10:36:19 by dbelpaum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+# include <cstdlib>
 
 class Contact {
 

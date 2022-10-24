@@ -6,7 +6,7 @@
 /*   By: dbelpaum <dbelpaum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:35:10 by dbelpaum          #+#    #+#             */
-/*   Updated: 2022/10/20 12:08:03 by dbelpaum         ###   ########.fr       */
+/*   Updated: 2022/10/24 10:45:14 by dbelpaum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,13 +119,13 @@ void	PhoneBook::search(void)
 		std::cout << std::endl;
 	}
 	str = "";
-	while ((!std::cin.eof() && str == "" || str.find_first_not_of("0123456789") != std::string::npos) || std::stoi(str) >= this->_idx || std::stoi(str) > 7 || std::stoi(str) < 0)
+	while (((!std::cin.eof() && str == "") || str.find_first_not_of("0123456789") != std::string::npos) || atoi(str.c_str()) >= this->_idx || atoi(str.c_str()) > 7 || atoi(str.c_str()) < 0)
 	{
 		std::cout << "Enter the index of the contact you want to display: ";
 		if (std::getline(std::cin, str) && str != "")
-			;
+			{};
 		if (std::cin.eof())
 			return ;
 	}
-	this->_printContact(std::stoi(str));
+	this->_printContact(atoi(str.c_str()));
 }
